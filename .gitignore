@@ -36,6 +36,8 @@
 *.sh
 # Include docker build scripts for Mac/Linux
 !run_docker.sh
+!build_run_docker.sh
+!scripts/lean-build-run.sh
 
 # QC Config Files:
 # config.json

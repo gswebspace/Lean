@@ -1,0 +1,12 @@
+# Use base system
+FROM quantconnect/lean:foundation
+
+MAINTAINER QuantConnect <contact@quantconnect.com>
+
+WORKDIR /Lean/Launcher/bin/Debug
+
+# Add the nuget restore + msbuild + mono run script
+COPY ./scripts/lean-build-run.sh /usr/local/bin
+RUN chmod u+x /usr/local/bin/lean-build-run.sh
+
+CMD lean-build-run.sh
